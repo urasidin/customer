@@ -1,6 +1,7 @@
 # Customer App
 
-Aplikasi CRUD customer sederhana dengan PHP 8.5 native (tanpa framework) + MySQL/MariaDB.
+Aplikasi CRUD customer sederhana dengan PHP native tanpa framework + MySQL/MariaDB.
+Butuh minimal PHP 8.2 (production memakai PHP 8.4).
 
 ## Struktur
 

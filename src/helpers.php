@@ -50,14 +50,14 @@ function view(string $name, array $data = []): void
     require __DIR__ . '/../views/layout.php';
 }
 
-/** Ambil & rapikan input form customer (memakai pipe operator PHP 8.5). */
+/** Ambil & rapikan input form customer. */
 function customer_input(): array
 {
-    $clean = fn(string $key): string => ($_POST[$key] ?? '') |> strval(...) |> trim(...);
+    $clean = fn(string $key): string => trim((string) ($_POST[$key] ?? ''));
 
     return [
         'name'    => $clean('name'),
-        'email'   => $clean('email') |> strtolower(...),
+        'email'   => strtolower($clean('email')),
         'phone'   => $clean('phone'),
         'address' => $clean('address'),
     ];
