@@ -14,12 +14,12 @@
         <table class="table table-hover align-middle mb-0">
             <thead class="table-light">
             <tr>
-                <th>#</th><th>Nama</th><th>Email</th><th>Telepon</th><th class="text-end">Aksi</th>
+                <th>#</th><th>Nama</th><th>Email</th><th>Telepon</th><th>Alamat</th><th class="text-end">Aksi</th>
             </tr>
             </thead>
             <tbody>
             <?php if (!$customers): ?>
-                <tr><td colspan="5" class="text-center text-muted py-4">Belum ada data.</td></tr>
+                <tr><td colspan="6" class="text-center text-muted py-4">Belum ada data.</td></tr>
             <?php endif ?>
             <?php foreach ($customers as $c): ?>
                 <tr>
@@ -27,6 +27,7 @@
                     <td><?= e($c['name']) ?></td>
                     <td><?= e($c['email']) ?></td>
                     <td><?= e($c['phone']) ?></td>
+                    <td class="text-truncate" style="max-width: 250px" title="<?= e($c['address']) ?>"><?= e($c['address']) ?: '-' ?></td>
                     <td class="text-end text-nowrap">
                         <a class="btn btn-sm btn-outline-info" href="index.php?action=show&id=<?= (int) $c['id'] ?>">Detail</a>
                         <a class="btn btn-sm btn-outline-warning" href="index.php?action=edit&id=<?= (int) $c['id'] ?>">Edit</a>
