@@ -1,0 +1,10 @@
+# Rahasia / konfigurasi per-environment
+config/config.php
+config.txt
+.env
+
+# Editor & OS
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
